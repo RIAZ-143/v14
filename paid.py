@@ -1,65 +1,25 @@
-import os
+import os, platform
 
- 
+try:
 
- 
+    import requests
 
- 
+except:
 
- 
+    os.system('pip install requests')
 
- 
+import requests
 
- 
+bit = platform.architecture()[0]
 
- 
+if bit == '64bit':
 
-os.system('git pull')
+    from v14 import abcdefg
 
- 
+    abcdefg()
 
- 
+elif bit == '32bit':
 
- 
+    from v14s import abcdefg
 
- 
-
- 
-
- 
-
- 
-
-os.system('termux-setup-storage')
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-import v14
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
- 
-
-v14.abcdefg()
+    abcdefg()
